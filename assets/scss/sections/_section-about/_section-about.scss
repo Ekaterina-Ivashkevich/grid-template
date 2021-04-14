@@ -1,0 +1,39 @@
+.about {
+    background-color: $color-gray-light;
+    @include lg-min {
+        padding-top: $gap * 5;
+        padding-bottom: $gap * 5;
+    }
+    @include lg-md {
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
+    }
+    @include md-sm {
+        padding-top: $gap * 3;
+        padding-bottom: $gap * 3;
+    }
+    @include sm {
+        padding-top: $gap * 3;
+        padding-bottom: $gap * 3;
+    }
+    &__container {
+        display: grid;
+        @extend %container;
+        @include lg-min {
+            grid-template-columns: 1fr 16.94rem;
+            gap: $gap * 5;
+        }
+        @include lg-md {
+            grid-template-columns: 1fr 16.94rem;
+            gap: $gap * 2;
+        }
+        @include md-sm {
+            grid-template-columns: 1fr 14.75rem;
+            gap: $gap;
+        }
+        @include sm {
+            grid-template-columns: 1fr;
+            gap: $gap;
+        }
+    }
+}
