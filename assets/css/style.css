@@ -476,8 +476,8 @@ template {
   width: 100%;
   font-size: 1.125rem;
   height: 3.75rem;
-  padding: 20px 30px;
-  line-height: 1.1;
+  line-height: 1.15;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -1113,7 +1113,8 @@ a {
           justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-  margin-bottom: 2.375rem;
+  margin-bottom: 2.5rem;
+  margin-left: 1px;
 }
 
 .footer__social::after {
