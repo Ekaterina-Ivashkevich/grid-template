@@ -1,0 +1,65 @@
+.form {
+    min-height: $gap * 6;
+    position: relative;
+    padding: 30px 0;
+    background-color: $color-primary;
+    &__container {
+        @extend %container;
+        display: grid;
+        gap: $gap;
+        @include md-min {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include md-sm {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.form-item {
+    &__input {
+        @extend %pattern_btn;
+        letter-spacing: 0.15em;
+        padding-left: ($gap / 2 * 3);
+        padding-right: ($gap / 2 * 3);
+        border: 0.125rem solid rgba($color-light, 0);
+        border-bottom-color: rgba($color-light, 0.25);
+        background-color: rgba($color-light, 0.05);
+        &:hover,
+        &:focus {
+            background-color: rgba($color-light, 0.15);
+            border-color: rgba($color-light, 0.15);
+            border-bottom-color: $color-light;
+            transition: 0.5s;
+            outline: none;
+        }
+    }
+    &__btn {
+        @extend %pattern_btn;
+        letter-spacing: 0.1em;
+        border: 0.125rem solid rgba($color-light, 0);
+        border-bottom-color: rgba($color-light, 0.2);
+        background-color: rgba($color-light, 0.1);
+        &:hover,
+        &:focus {
+            background-color: $color-accent;
+            border-color: $color-light;
+            transition: 0.5s;
+            outline: none;
+        }
+    }
+}
+
+.form-item__input::placeholder {
+    color: $color-gray;
+}
+
+.form-item__input:hover::placeholder {
+    color: #8c9bab;
+}
+
+@include md-sm {
+    .form-item:nth-of-type(1) {
+        grid-column: 1 / span 2;
+    }
+}

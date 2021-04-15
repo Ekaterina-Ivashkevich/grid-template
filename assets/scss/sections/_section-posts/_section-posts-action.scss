@@ -1,0 +1,7 @@
+.posts__action {
+    align-items: center;
+    justify-content: center;
+    @include sm-min {
+        display: flex;
+    }
+}

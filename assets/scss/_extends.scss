@@ -4,3 +4,13 @@
     padding-left: $gap;
     padding-right: $gap;
 }
+
+%pattern_btn {
+    display: block;
+    color: $color-light;
+    width: 100%;
+    font-size: 1.125rem;
+    height: 3.75rem;
+    padding: $gap ($gap / 2 * 3);
+    line-height: 1.1;
+}

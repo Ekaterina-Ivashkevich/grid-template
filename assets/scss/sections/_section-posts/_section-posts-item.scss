@@ -1,0 +1,61 @@
+.post-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: #d8d8d8;
+        h3,
+        p {
+            color: $color-primary;
+        }
+        .post-item__image img {
+            transform: scale(1.1);
+        }
+    }
+    &__link {
+        height: 100%;
+        display: grid;
+        overflow: hidden;
+        grid-template-rows: 300px 1fr;
+    }
+    &__image {
+        display: flex;
+        overflow: hidden;
+        align-content: center;
+        justify-content: center;
+        background-color: $color-primary;
+        img {
+            transition: transform 0.5s;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__caption {
+        display: grid;
+        align-content: center;
+        padding: $gap;
+    }
+    &__title {
+        text-align: center;
+        color: $color-gray;
+        font-family: $font-header;
+        font-size: 1.125rem;
+        letter-spacing: 0.05em;
+        line-height: $gap;
+    }
+    &__content {
+        text-align: center;
+        color: $color-gray;
+        font-family: $font-main;
+        font-size: 1rem;
+        letter-spacing: 0.0001em;
+        line-height: 1.15;
+    }
+}
+
+@for $i from 1 through 6 {
+    .post-item:nth-of-type(#{$i}) {
+        grid-area: a#{$i};
+    }
+}

@@ -1,0 +1,67 @@
+.posts {
+    @include lg-min {
+        padding-bottom: $gap * 5;
+        padding-top: $gap * 5;
+    }
+    @include lg-md {
+        padding-bottom: $gap * 4;
+        padding-top: $gap * 4;
+    }
+    @include md-sm {
+        padding-bottom: $gap * 3;
+        padding-top: $gap * 3;
+    }
+    @include sm {
+        padding-bottom: $gap * 3;
+        padding-top: $gap * 3;
+    }
+    &__container {
+        @extend %container;
+        background-color: $color-light;
+    }
+    &__title {
+        margin-top: 0;
+        letter-spacing: 0.1em;
+        color: $color-primary;
+        font-family: $font-header;
+        line-height: 1.2em;
+        @include lg-min {
+            margin-bottom: 3.5rem;
+            font-size: 2.5rem;
+        }
+        @include lg-md {
+            margin-bottom: 2.63rem;
+            font-size: 2rem;
+        }
+        @include md-sm {
+            margin-bottom: 2.25rem;
+            font-size: 1.5rem;
+        }
+        @include sm {
+            margin-bottom: 2.25rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    &__grid {
+        display: grid;
+        gap: $gap;
+        padding-bottom: $gap;
+        @include lg-min {
+            grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include lg-md {
+            grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6";
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include md-sm {
+            grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+            grid-template-columns: 1fr 1fr;
+        }
+        @include sm {
+            grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
+            grid-template-columns: 1fr;
+        }
+    }
+}
